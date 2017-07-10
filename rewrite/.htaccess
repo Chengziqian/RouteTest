@@ -1,0 +1,7 @@
+RewriteEngine on
+RewriteRule ^$ index.php
+RewriteCond %{REQUEST_METHOD} ^POST$
+RewriteRule ^new$ testpost.php
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteRule ^(?!test)([0-9a-zA-z]+)$ testget.php?message=$1
+RewriteRule ^test$ test.php
